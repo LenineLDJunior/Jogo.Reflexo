@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Jogo de Reflexo" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Reflexo Le9</title>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+        <section id="menuDificuldade">
+            <h3>Escolha sua dificuldade</h3>
+        <button id="buttonEasy" class="buttonDificuldade">Facil</button>
+        <button id="buttonNormal" class="buttonDificuldade">Normal</button>
+        <button id="buttonHard" class="buttonDificuldade">Dificil</button>
+        </section>
+        
+        <section id="menuTempo">
+        <h3>Escolha o tempo</h3>
+        <button id="btn30" class="buttonDificuldade">30s</button>
+        <button id="btn60" class="buttonDificuldade">60s</button>
+        <button id="btn90" class="buttonDificuldade">90s</button>
+        </section>
+               
+    <div class="container" id="btnContainer">
+        <div class="center">
+            <button id='btnJogar' class="btn">
+                <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                </svg>
+                <span>JOGAR</span>
+            </button>
+        </div>
+    </div>
+    <button id="jogarNovamente">
+        Teste
+    </button>
+    <section id="contador">
+        <p> 
+            <span id="tempo" />
+        </p>  
+        <div id="temporizador"></div>
+        <center>
+            <div>
+                <center><h3 id="counter-label">0</h3></center>
+            </div>
+        </center>
+    </section>
+    <div class="wrap">
+    <button id="alvo" ></button>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="$jQuerry.js"></script>
+</body>
+</html>
