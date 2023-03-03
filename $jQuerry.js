@@ -4,7 +4,7 @@ var contador = 30;
 var opcaoTempo = 30;
 
 
-$(document).ready(function () {
+$(document).ready(function (Menu) {
 
 //Menu dificuldade
     $('#buttonEasy').click(function tempook(){
@@ -25,7 +25,7 @@ $(document).ready(function () {
 //Menu tempo
     $('#btn30').click(function tempook(){
         $('#menuTempo').hide();
-        opcaoTempo = 3;
+        opcaoTempo = 30;
     });
 
     $('#btn60').click(function tempook(){
@@ -47,6 +47,8 @@ $(document).ready(function () {
         contador = opcaoTempo;
         setTimeout(temporizador,1000);
     });
+
+    
 
 //Posição inicial aletaoria do alvo
     $("#alvo").css(
@@ -70,6 +72,13 @@ $(document).ready(function () {
                 marginTop: Math.min($(window).height(), Math.random() * 400)
             }
         );
+    });
+
+    //Back Menu Resetar 
+    $(document).ready(function () {
+        $("#menu").click(function () {
+            location.reload(true);
+        });
     });
 
 });
@@ -102,3 +111,19 @@ function resetCounter() {
 function updateDisplay(val) {
     $("#counter-label").html(val);
 }
+
+function BackMenu() {
+    $('#menu').click(function tempook(){
+        $('#menuTempo').show();
+        $("#menuDificuldade").show();
+        $('#btnContainer').show();
+        $('#contador').hide();
+        function resetCounter(){
+            counterVal = 0;
+            updateDisplay(counterVal);
+        };
+})
+
+}
+ //Voltar ao Menu
+ 
