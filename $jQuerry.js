@@ -6,7 +6,7 @@ var opcaoTempo = 30;
 
 $(document).ready(function (Menu) {
 
-//Menu dificuldade
+    //Menu dificuldade
     $('#buttonEasy').click(function tempook(){
         $('#alvo').css("padding","40px");
             $("#menuDificuldade").hide();
@@ -37,8 +37,9 @@ $(document).ready(function (Menu) {
         $('#menuTempo').hide();
         opcaoTempo = 90;
     });
+});
 
-//Botão start do jogo.
+    //Botão start do jogo.
     $('#btnJogar').click(function começo() {
         $('#btnContainer').hide();
         
@@ -50,7 +51,7 @@ $(document).ready(function (Menu) {
 
     
 
-//Posição inicial aletaoria do alvo
+    //Posição inicial aletaoria do alvo
     $("#alvo").css(
         {
             marginLeft: Math.min($(window).width(), Math.random() * 1000),
@@ -58,7 +59,7 @@ $(document).ready(function (Menu) {
         }
     );
 
-//Função ao clicar no alvo
+    //Função ao clicar no alvo
     $('#alvo').click(function () {
         updateDisplay(++counterVal);
 
@@ -81,10 +82,9 @@ $(document).ready(function (Menu) {
         });
     });
 
-});
-// Temporizador 
+    // Temporizador 
 
-function temporizador() {
+    function temporizador() {
   if(contador > 0){
     setTimeout(temporizador,1000);
   } else {
@@ -94,12 +94,11 @@ function temporizador() {
   }
   document.getElementById('tempo').innerHTML = contador;
   contador--;
-}
+    }
 
 function reset(){
     $('#btnContainer').show();
 }
-
 
 //Zerar contador acertos
 function resetCounter() {
@@ -111,19 +110,3 @@ function resetCounter() {
 function updateDisplay(val) {
     $("#counter-label").html(val);
 }
-
-function BackMenu() {
-    $('#menu').click(function tempook(){
-        $('#menuTempo').show();
-        $("#menuDificuldade").show();
-        $('#btnContainer').show();
-        $('#contador').hide();
-        function resetCounter(){
-            counterVal = 0;
-            updateDisplay(counterVal);
-        };
-})
-
-}
- //Voltar ao Menu
- 
