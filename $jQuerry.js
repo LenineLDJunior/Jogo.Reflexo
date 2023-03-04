@@ -37,6 +37,8 @@ $(document).ready(function (Menu) {
         $('#menuTempo').hide();
         opcaoTempo = 90;
     });
+
+   //$('#btnJogar').hide();
 });
 
     //Botão start do jogo.
