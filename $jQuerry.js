@@ -37,16 +37,7 @@ $(document).ready(function (Menu) {
         $('#menuTempo').hide();
         opcaoTempo = 90;
     });
-
-    //Botão Jogar
     
-    $(document).ready( function btnJogar(){
-        $('#btnJogar').hide();
-    });
-
-    if ($('#btn30').click()){
-        $('#btnJogar').show();
-    }
 });
 
     //Botão start do jogo.
